@@ -1,13 +1,13 @@
 export default defineNuxtConfig({
     app: {
         head: {
-            htmlAttrs: {
+             htmlAttrs: {
                 lang: 'es'
-            },
-            charset: 'utf-16',
-            viewport: 'width=500, initial-scale=1',
-            title: 'Egilit',
-            meta: [
+              },
+              meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { hid: 'description', name: 'description', content: 'Brief summary of page content' },
                 { name: 'e-commerce', content: 'Comercio electronico' }
             ],
 
