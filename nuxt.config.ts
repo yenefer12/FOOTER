@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
     app: {
         head: {
+            titleTemplate:"%s egilit",
              htmlAttrs: {
                 lang: 'es'
               },
