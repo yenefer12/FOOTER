@@ -29,7 +29,8 @@ export default defineNuxtConfig({
     // deja utilizar globalmente las configuraciones de body y * pero no variables
 
     css: [
-        '@/assets/css/global.scss'
+        '@/assets/css/global.scss',
+        '@fortawesome/fontawesome-svg-core/styles.css',
     ],
 
     // deja utilizar globalmente las variables pero no las configuraciones de body y *
@@ -41,6 +42,17 @@ export default defineNuxtConfig({
             }
           }
         }
+    },
+
+    //elimino un error raro ....Could not find one or more icon(s) { prefix: 'fab', iconName: 'facebook' } {} 15:10:52 Could not find one or more icon(s) { prefix: 'fab', iconName: 'instagram' } {} 15:10:52 Could not find one or more icon(s) { prefix: 'fab', iconName: 'facebook' } {} 15:11:06 Could not find one or more icon(s) { prefix: 'fab', iconName: 'instagram' } {}
+    build: {
+        transpile: [
+        "@fortawesome/vue-fontawesome",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/free-brands-svg-icons",
+        "@fortawesome/free-solid-svg-icons",
+        "@fortawesome/free-brands-svg-icons",
+        ],
     },
 
 })
